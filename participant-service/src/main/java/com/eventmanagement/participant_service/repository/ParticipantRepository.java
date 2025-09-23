@@ -9,6 +9,8 @@ public interface ParticipantRepository extends JpaRepository<Participant,Long> {
 
     boolean existsByEmail(String email);
 
+    boolean existsByPhone(String phone);
+
 
 
 }

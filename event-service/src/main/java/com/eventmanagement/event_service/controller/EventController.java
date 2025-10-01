@@ -26,6 +26,11 @@ public class EventController {
         return ResponseEntity.status(HttpStatus.CREATED).body(eventResponseDto);
     }
 
+    @GetMapping("/{id}/exists")
+    public boolean eventExists(@PathVariable Long id) {
+        return eventService.eventExists(id);
+    }
+
     @GetMapping
     public ResponseEntity<List<EventResponseDto>> getAllEvents() {
         return ResponseEntity.ok(eventService.getAllEvents());

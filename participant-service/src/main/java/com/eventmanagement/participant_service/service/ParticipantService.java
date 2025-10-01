@@ -36,6 +36,11 @@ public class ParticipantService {
         return participantMapper.toDto(saved);
     }
 
+    public boolean participantExists(Long id) {
+        return participantRepository.existsById(id);
+    }
+
+
 
     public List<ParticipantResponseDto> getAllParticipants() {
 

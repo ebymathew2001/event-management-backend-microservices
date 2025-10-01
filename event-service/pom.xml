@@ -9,10 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.eventmanagement</groupId>
-	<artifactId>participant-service</artifactId>
+	<artifactId>event-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>participant-service</name>
-	<description>Service for managing participant in the Event Management System</description>
+	<name>event-service</name>
+	<description>Service for managing events in the Event Management System</description>
+
 	<url/>
 	<licenses>
 		<license/>

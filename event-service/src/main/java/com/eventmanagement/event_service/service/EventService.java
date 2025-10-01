@@ -26,6 +26,10 @@ public class EventService {
         return eventMapper.toDto(saved);
     }
 
+    public boolean eventExists(Long id) {
+        return eventRepository.existsById(id);
+    }
+
     public List<EventResponseDto> getAllEvents() {
         List<Event> events = eventRepository.findAll();
         List<EventResponseDto> responseDtos = new ArrayList<>();

@@ -36,6 +36,11 @@ public class ParticipantController {
         return ResponseEntity.ok(participantService.getParticipantById(id));
     }
 
+    @GetMapping("/{id}/exists")
+    public boolean participantExists(@PathVariable Long id) {
+        return participantService.participantExists(id);
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<ParticipantResponseDto> updateParticipant(
             @PathVariable Long id,

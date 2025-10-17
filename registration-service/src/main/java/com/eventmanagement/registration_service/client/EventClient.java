@@ -1,6 +1,7 @@
 package com.eventmanagement.registration_service.client;
 
 
+import com.eventmanagement.registration_service.client.dto.EventClientResponseDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,4 +11,10 @@ public interface EventClient {
 
     @GetMapping("/api/events/{id}/exists")
     boolean eventExists(@PathVariable("id") Long id);
+
+    @GetMapping("/api/events/{id}")
+    EventClientResponseDto getEventById(@PathVariable("id") Long id);
+
+
+
 }
